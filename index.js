@@ -16,6 +16,9 @@ app.get('/hello/:foo/:bar', (req, res) => {
     ]});
 });
 
+app.post('/hello', (req, res) => {
+    res.json({result: 'Post was sent', data: req.body});
+});
 
 
 
