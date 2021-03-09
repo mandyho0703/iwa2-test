@@ -7,18 +7,21 @@ bodyParser = require('body-parser');
 var app = express();
 var port = 8000;
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(logger('tiny'));
+app.use(require('./routes'));
 
-app.get('/hello/:foo/:bar', (req, res) => {
-    res.json({message: "Hello BScBest!", data: [
-        req.params.foo,
-        req.params.bar
-    ]});
-});
 
-app.post('/hello', (req, res) => {
-    res.json({result: 'Post was sent', data: req.body});
-});
+// app.get('/hello/:foo/:bar', (req, res) => {
+//     res.json({message: "Hello BScBest!", data: [
+//         req.params.foo,
+//         req.params.bar
+//     ]});
+// });
+
+// app.post('/hello', (req, res) => {
+//     res.json({result: 'Post was sent', data: req.body});
+// });
 
 
 
