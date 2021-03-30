@@ -9,6 +9,10 @@ type: String,
 enum: ['MALE', 'FEMALE']
 },
 phone: Number
-});
+},
+{timestamps: true}
+
+);
+
 
 module.exports = mongoose.model('User', userSchema);
