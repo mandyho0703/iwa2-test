@@ -30,7 +30,7 @@ exports.getUser = function(req, res) {
 };
 
 exports.updateUser = function(req, res) {
-  User.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, users) {
+  User.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, users) {
     if (err) {
       res.status(400).json(err); 
     } 

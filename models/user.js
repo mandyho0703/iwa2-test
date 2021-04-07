@@ -5,10 +5,12 @@ email: { type: String, unique: true, lowercase: true},
 password: String,
 username: String,
 gender: {
-type: String,
-enum: ['MALE', 'FEMALE']
+    type: String,
+    enum: ['MALE', 'FEMALE']
 },
 phone: Number
-});
+},
+{ timestamps: true }
+);
 
 module.exports = mongoose.model('User', userSchema);

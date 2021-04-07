@@ -1,5 +1,5 @@
 const http = require('http'),
-axios = require('axios'),
+// axios = require('axios'),
 logger = require('morgan'),
 cors = require('cors'),
 express = require('express'),
@@ -61,7 +61,6 @@ app.use(require('./routes'));
 app.listen(port, function(err){
     console.log('Listening on port: ' + port);
 });
-
 
 const dbURI = "mongodb://localhost/test";
 
